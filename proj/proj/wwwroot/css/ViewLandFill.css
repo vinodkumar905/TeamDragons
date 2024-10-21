@@ -1,0 +1,122 @@
+﻿/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Light grey background */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Main Container for the Landfill View */
+.view-landfill {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for content */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    animation: fadeIn 1s ease; /* Smooth fade-in animation */
+}
+
+/* Header Styling */
+.text-center h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff;
+    padding: 15px;
+    border-radius: 8px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+    .text-center h2:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+
+/* Table Styles */
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Light shadow */
+    border-collapse: collapse;
+}
+
+    /* Table Header */
+    .table th {
+        background-color: #007bff;
+        color: #ffffff;
+        padding: 12px;
+        text-align: left;
+    }
+
+    /* Table Cells */
+    .table th, .table td {
+        padding: 12px;
+        border: none;
+    }
+
+    .table tbody tr {
+        transition: background-color 0.3s;
+    }
+
+        .table tbody tr:hover {
+            background-color: #f1f1f1; /* Light grey on hover */
+        }
+
+/* Button Styles */
+.btn {
+    transition: background-color 0.3s, transform 0.2s;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+}
+
+    .btn-danger:hover {
+        background-color: #c82333;
+        transform: scale(1.05);
+    }
+
+/* No Data Row Styling */
+.table td[colspan="6"] {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 20px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px); /* Slight slide down */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

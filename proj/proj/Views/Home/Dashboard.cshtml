@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<!-- Admin Dashboard -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/css/Dashboard.css">
+</head>
+
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+
+                <div class="text logo-text">
+                    <span class="name">Admin Dashboard</span>
+                    <span class="profession">Welcome, Admin</span>
+                </div>
+            </div>
+
+            <span class="toggle" onclick="toggleSidebar()">&#9776;</span>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="@Url.Action("CreateUser", "UserSetup")">
+                            <span class="text nav-text">User Setup</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="@Url.Action("ViewUser", "UserSetup")">
+                            <span class="text nav-text">View Setup</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="@Url.Action("CreateWasteCollection", "WasteCollection")">
+                            <span class="text nav-text">Data Entry</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="@Url.Action("ViewCollection", "WasteCollection")">
+                            <span class="text nav-text">View Collection</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="@Url.Action("CreateSales", "Recyclingsales")">
+                            <span class="text nav-text">Recycle Sales Collection</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="@Url.Action("ViewSales", "Recyclingsales")">
+                            <span class="text nav-text">View Sales Collection</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" onclick="showTab('reports')">
+                            <span class="text nav-text">Reports</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="@Url.Action("CreateLandfill", "LandFill")">
+                            <span class="text nav-text">Land Fill</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="@Url.Action("ViewLandfill", "LandFill")">
+                            <span class="text nav-text">View Land Fill</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <h2 class="text-center">Admin Dashboard</h2>
+            </div>
+        </nav>
+        <h2>Welcome to the Admin Dashboard</h2>
+        <!-- Add your content here -->
+    </section>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('close');
+        }
+
+        function showTab(tabId) {
+            // Logic to show the relevant tab
+            console.log(`Showing tab: ${tabId}`);
+        }
+
+        // Initialize the first tab as active
+        showTab('user-setup');
+    </script>
+</body>
+</html>

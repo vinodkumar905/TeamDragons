@@ -1,0 +1,73 @@
+﻿@model List<proj.Models.WasteCollection>
+
+@{
+    ViewData["Title"] = "Recycling Collection Management";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/ViewCollection.css" asp-append-version="true" />
+}
+
+<div class="view-collection">
+    <div class="text-center">
+        <h2>Recycling Collection Management</h2>
+    </div>
+
+    <div>
+        @if (Model == null)
+        {
+            <p class="alert alert-warning">Model is null.</p>
+        }
+        else if (!Model.Any())
+        {
+            <p class="alert alert-warning">Model is empty.</p>
+        }
+        else
+        {
+            <p>Model has @Model.Count() waste collection record(s).</p>
+        }
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Collection Id</th>
+                <th>Entry Date</th>
+                <th>Category</th>
+                <th>Subcategory</th>
+                <th>Weight (lbs)</th>
+                <th>Recyclable</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var collection in Model)
+                {
+                    <tr>
+                        <td>@collection.Collection_id</td>
+                        <td>@(collection.EntryDate.HasValue ? collection.EntryDate.Value.ToString("MM/dd/yyyy") : "")</td>
+                        <td>@collection.Category</td>
+                        <td>@(string.IsNullOrEmpty(collection.Subcategory) ? "" : collection.Subcategory)</td>
+                        <td>@collection.WeightInLbs</td>
+                        <td>@(collection.IsRecyclable ? "Yes" : "No")</td>
+                        <td>
+                            <a asp-controller="WasteCollection" asp-action="EditCollection"
+                               asp-route-id="@collection.Collection_id" class="btn btn-primary">Edit</a>
+                            <a asp-controller="WasteCollection" asp-action="DeleteCollection"
+                               asp-route-id="@collection.Collection_id" class="btn btn-danger"
+                               onclick="return confirm('Are you sure you want to delete this record?');">Delete</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="7" class="text-center">No waste collections found.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

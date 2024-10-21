@@ -1,0 +1,67 @@
+﻿@model proj.Models.LandFill
+@{
+    ViewData["Title"] = "Create New User";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/CreateLandFill.css" asp-append-version="true" />
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Land Fill</title>
+</head>
+<body>
+
+    <h2 class="text-center">Create Land Fill</h2> <!-- Header aligned with CSS -->
+
+    <form asp-controller="LandFill" asp-action="Create" method="post" class="form-horizontal">
+        <!-- Land Fill Date -->
+        <div class="form-group">
+            <label class="control-label">Land Fill Date</label>
+            <input asp-for="Landfill_Date" class="form-control" type="date" required />
+            <span asp-validation-for="Landfill_Date" class="text-danger"></span>
+        </div>
+
+        <!-- Weight in Lbs -->
+        <div class="form-group">
+            <label class="control-label">Weight In Lbs</label>
+            <input asp-for="weight_In_Lbs" class="form-control" type="text" required />
+            <span asp-validation-for="weight_In_Lbs" class="text-danger"></span>
+        </div>
+
+        <!-- Expense in USD -->
+        <div class="form-group">
+            <label class="control-label">Expense In USD</label>
+            <input asp-for="Expense_In_Usd" class="form-control" type="text" required />
+            <span asp-validation-for="Expense_In_Usd" class="text-danger"></span>
+        </div>
+
+        <!-- Landfill/Hauler Name -->
+        <div class="form-group">
+            <label class="control-label">Landfill / Hauler (Name of Company)</label>
+            <input asp-for="LANDFILL_HAULER_NAME" class="form-control" type="text" required />
+            <span asp-validation-for="LANDFILL_HAULER_NAME" class="text-danger"></span>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+            <button type="submit" class="submit-button">
+                Submit
+            </button>
+        </div>
+    </form>
+
+    <!-- Success Message -->
+    @if (TempData["msg"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["msg"]
+        </div>
+    }
+
+</body>
+</html>

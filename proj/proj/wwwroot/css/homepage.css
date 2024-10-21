@@ -1,0 +1,122 @@
+﻿/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Ensure HTML and Body take full height */
+html, body {
+    height: 100%;
+}
+
+/* Header Styling */
+.header {
+    background-color: #d2f8d2; /* Light green color */
+    color: black; /* Changed to black for better contrast */
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+    .nav-links li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .nav-links a {
+        color: black; /* Changed to black for better contrast */
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+/* Hero Section Styling - fills entire viewport below header */
+.hero {
+    background: url('https://source.unsplash.com/1600x900/?recycle') no-repeat center center/cover;
+    height: calc(100vh - 80px); /* Adjust height by header size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    width: 60%;
+}
+
+/* Middle Content Section */
+.content-section {
+    padding: 80px 40px; /* Increased top and bottom padding */
+    text-align: center;
+    background: url("/images/HomePage.jpg") no-repeat center center / cover; /* Adjust the path as needed */
+    color: white; /* Text color for better contrast */
+    position: relative; /* Ensure the pseudo-element is positioned relative to this section */
+    z-index: 1; /* Set the stacking order for this section */
+}
+
+    /* Overlay for text clarity */
+    .content-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Dark overlay to enhance text visibility */
+        z-index: -1; /* Position behind the content */
+    }
+
+    /* Heading and Paragraph Styling */
+    .content-section h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
+    }
+
+    .content-section p {
+        font-size: 18px;
+        width: 80%;
+        margin: 0 auto;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
+    }
+
+/* Footer Styling */
+.footer {
+    background-color: #d2f8d2; /* Light green color */
+    color: black; /* Changed to black for better contrast */
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Ensures proper stacking */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Image Section Styling - Optional if you need a dedicated image section */
+.image-section {
+    width: 100%;
+    height: 100vh; /* Ensures it takes the full height */
+    background-image: url("/images/home.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

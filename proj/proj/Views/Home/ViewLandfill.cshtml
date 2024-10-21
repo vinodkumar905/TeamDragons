@@ -1,0 +1,47 @@
+﻿@model IEnumerable<proj.Models.LandFill>
+@{
+    ViewData["Title"] = "LandFill Management";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/ViewLandFill.css" asp-append-version="true" />
+}
+
+<div class="view-landfill">
+    <div class="text-center">
+        <h2>LandFill Management</h2>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Landfill ID</th>
+                <th>LandFill Date</th>
+                <th>Weight (lbs)</th>
+                <th>Expense (USD)</th>
+                <th>Hauler</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.landfill_id</td>
+                    <td>@(item.Landfill_Date.HasValue ? item.Landfill_Date.Value.ToString("MM/dd/yyyy") : "N/A")
+                    <td>@item.weight_In_Lbs</td>
+                    <td>@item.Expense_In_Usd</td>
+                    <td>@item.LANDFILL_HAULER_NAME</td>
+                    <td>
+                        <a asp-controller="LandFill" asp-action="EditLandfill" asp-route-id="@item.landfill_id"
+                           class="btn btn-primary">Edit</a>
+                        <a asp-controller="LandFill" asp-action="DeleteLandfill" asp-route-id="@item.landfill_id"
+                           class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this record?');">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

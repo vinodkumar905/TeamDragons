@@ -1,0 +1,104 @@
+﻿/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Light background for contrast */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Main Container for the Form */
+.container {
+    max-width: 600px; /* Form width */
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffffff, #e6f7ff); /* Soft gradient background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    animation: fadeIn 0.5s ease; /* Smooth fade-in animation */
+}
+
+/* Header Styling */
+.text-center h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #007bff; /* Blue header color */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px; /* Spacing between form fields */
+}
+
+/* Input Field Styles */
+.form-control {
+    width: 100%; /* Full-width inputs */
+    padding: 15px 20px; /* Adjusted padding */
+    font-size: 1rem; /* Consistent font size */
+    height: 60px; /* Fixed height for input fields */
+    border: 2px solid #ced4da; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+    margin-bottom: 15px; /* Spacing below each input */
+    box-sizing: border-box; /* Include padding/border in element width */
+}
+
+    /* Input Focus Effect */
+    .form-control:focus {
+        border-color: #007bff; /* Blue border on focus */
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue glow effect */
+        outline: none; /* Remove default outline */
+    }
+
+/* Submit Button Styling */
+.submit-button {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    border: none;
+    color: white;
+    background-color: #007bff; /* Button color */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+    /* Submit Button Hover Effect */
+    .submit-button:hover {
+        background-color: #0056b3; /* Darker blue */
+        transform: scale(1.05); /* Slight button grow on hover */
+    }
+
+/* Alert Message Styling */
+.alert {
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Label Styling */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Dropdown Styling */
+select.form-control {
+    appearance: none; /* Remove default arrow */
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBkPSJNNC4yIDEybDQuMi00LjIgNC4yIDQuMnoiLz48L3N2Zz4=') no-repeat right 10px center;
+    background-size: 12px;
+    padding-right: 40px; /* Adjust for arrow icon */
+}

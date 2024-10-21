@@ -1,0 +1,102 @@
+﻿/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Light background for contrast */
+    margin: 20px; /* Add some margin to the body */
+}
+
+
+/* ViewUser.css */
+
+.text-center h2 {
+    font-size: 2.5rem; /* Increase font size */
+    font-weight: bold; /* Bold text */
+    color: #ffffff; /* White text color */
+    background-color: #007bff; /* Bootstrap primary color */
+    padding: 15px; /* Padding around the text */
+    border-radius: 8px; /* Rounded corners */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+    margin-bottom: 20px; /* Space below the header */
+    transition: background-color 0.3s, transform 0.3s; /* Animation effects */
+}
+
+    .text-center h2:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+        transform: scale(1.05); /* Slightly enlarge on hover */
+    }
+
+
+/* Table Styles */
+.table {
+    background-color: #ffffff; /* White background for the table */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+    .table th {
+        background-color: #007bff; /* Bootstrap primary color */
+        color: #ffffff; /* White text for header */
+        padding: 12px; /* Add padding for header cells */
+        text-align: left; /* Align header text to the left */
+    }
+
+    .table th, .table td {
+        border: none; /* Remove default borders */
+        padding: 12px; /* Add padding for table cells */
+    }
+
+    /* Row Styles */
+    .table tbody tr {
+        transition: background-color 0.3s; /* Smooth background color change */
+    }
+
+        .table tbody tr:hover {
+            background-color: #f1f1f1; /* Light grey background on hover */
+        }
+
+/* Button Styles */
+.btn {
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions for buttons */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Bootstrap primary color */
+    border: none; /* Remove border */
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3; /* Darken primary color on hover */
+        transform: scale(1.05); /* Slightly enlarge button on hover */
+    }
+
+.btn-danger {
+    background-color: #dc3545; /* Bootstrap danger color */
+    border: none; /* Remove border */
+}
+
+    .btn-danger:hover {
+        background-color: #c82333; /* Darken danger color on hover */
+        transform: scale(1.05); /* Slightly enlarge button on hover */
+    }
+
+/* Debugging Text */
+p {
+    color: #ff0000; /* Red color for debugging text */
+}
+
+/* Animation for headings */
+h2 {
+    animation: fadeIn 1s ease; /* Fade-in animation for the heading */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start from transparent */
+    }
+
+    to {
+        opacity: 1; /* Fade to fully visible */
+    }
+}

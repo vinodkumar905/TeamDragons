@@ -1,0 +1,53 @@
+﻿@model proj.Models.UserSetup
+@{
+    ViewData["Title"] = "Create New User";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/CreateUser.css" asp-append-version="true" />
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New User</title>
+</head>
+<body>
+    <div class="text-center">
+        <h2>Create New User</h2>
+    </div>
+    <form>
+        <div class="form-group">
+            <label for="username">UserName</label>
+            <input type="text" class="custom-input" id="username" name="username" required />
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="custom-input" id="password" name="password" required />
+        </div>
+        <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" class="custom-input" id="confirm-password" name="confirm-password" required />
+        </div>
+        <div class="form-group">
+            <label for="login-type">Login Type</label>
+            <select class="custom-select" id="login-type" name="login-type" required>
+                <option value="" disabled selected>Select Login Type</option>
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+                <option value="guest">Guest</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="active">Active</label>
+            <select class="custom-select" id="active" name="active" required>
+                <option value="Y">Y</option>
+                <option value="N">N</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>

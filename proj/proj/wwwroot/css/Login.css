@@ -1,0 +1,131 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 10px;
+    background: url("/images/loginimg.jpg") no-repeat center center / cover, #000; /* Local background image */
+    background-attachment: fixed;
+    filter: brightness(0.9); /* Dim background for better readability */
+}
+
+.wrapper {
+    width: 400px;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9); /* Change to a lighter background for contrast */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #000; /* Change title color to black */
+}
+
+.input-field {
+    position: relative;
+    border-bottom: 2px solid #ccc;
+    margin: 15px 0;
+}
+
+    .input-field label {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        color: #000; /* Change label color to black */
+        font-size: 16px;
+        pointer-events: none;
+        transition: 0.3s ease-in-out;
+    }
+
+    .input-field input {
+        width: 100%;
+        height: 40px;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        color: #000; /* Change input text color to black */
+        padding: 5px 0;
+    }
+
+        .input-field input:focus ~ label,
+        .input-field input:valid ~ label {
+            font-size: 0.8rem;
+            top: 10px;
+            transform: translateY(-120%);
+        }
+
+.forget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0 35px 0;
+    color: #000; /* Change forget text color to black */
+}
+
+#remember {
+    accent-color: #000; /* Change checkbox accent color to black */
+}
+
+.forget label {
+    display: flex;
+    align-items: center;
+}
+
+    .forget label p {
+        margin-left: 8px;
+    }
+
+.wrapper a {
+    color: #000; /* Change link color to black */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+    .wrapper a:hover {
+        text-decoration: underline;
+        color: #000; /* Change hover color to black */
+    }
+
+button {
+    background: #000; /* Button background */
+    color: #fff; /* Button text color */
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+    button:hover {
+        background: rgba(0, 0, 0, 0.8); /* Darker black for hover effect */
+        color: #fff; /* Keep text white */
+        border-color: rgba(255, 255, 255, 0.5); /* Light border color on hover */
+    }

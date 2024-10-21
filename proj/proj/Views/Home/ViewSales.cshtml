@@ -1,0 +1,75 @@
+﻿@model List<proj.Models.Recyclingsales>
+
+
+@{
+    ViewData["Title"] = "Recycling Sales Management";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/ViewSales.css" asp-append-version="true" />
+}
+
+<div class="text-center">
+    <!-- Centering the title -->
+    <h2>Recycling Sales Management</h2>
+</div>
+
+
+    <div>
+        @* Debugging: Check if the model is null or has items *@
+        @if (Model == null)
+        {
+            <p class="alert alert-warning">Model is null.</p>
+        }
+        else if (!Model.Any())
+        {
+            <p class="alert alert-warning">Model is empty.</p>
+        }
+        else
+        {
+            <p>Model has @Model.Count() recycling sales record(s).</p>
+        }
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Revenue ID</th>
+                <th>Sales Date</th>
+                <th>Material Category</th>
+                <th>Material Subcategory</th>
+                <th>Material Weight (lbs)</th>
+                <th>Revenue (in USD)</th>
+                <th>Buyer Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any()) // Check if Model is not null and has items
+            {
+                foreach (var sale in Model)
+                {
+                    <tr>
+                        <td>@sale.Revenue_id</td>
+                        <td>@(sale.Sales_date.HasValue ? sale.Sales_date.Value.ToString("MM/dd/yyyy") : "N/A")</td>
+                        <td>@sale.Material_Category</td>
+                        <td>@(sale.Material_SubCategory ?? "N/A")</td>
+                        <td>@sale.Material_Weight_lbs</td>
+                        <td>@sale.Revenue_in_USD.ToString("C")</td> <!-- Formats as currency -->
+                        <td>@sale.Buyer_Name</td>
+                        <td>
+                            <a asp-controller="RecyclingSales" asp-action="EditSales" asp-route-id="@sale.Revenue_id" class="btn btn-primary">Edit</a>
+                            <a asp-controller="RecyclingSales" asp-action="DeleteSales" asp-route-id="@sale.Revenue_id" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this record?');">Delete</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="8">No recycling sales found.</td>  <!-- Message when no records are available -->
+                </tr>
+            }
+        </tbody>
+    </table>
+
