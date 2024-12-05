@@ -5,9 +5,7 @@ body {
     margin: 20px; /* Add some margin to the body */
 }
 
-
-/* ViewUser.css */
-
+/* Header Styles */
 .text-center h2 {
     font-size: 2.5rem; /* Increase font size */
     font-weight: bold; /* Bold text */
@@ -17,7 +15,7 @@ body {
     border-radius: 8px; /* Rounded corners */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
     margin-bottom: 20px; /* Space below the header */
-    transition: background-color 0.3s, transform 0.3s; /* Animation effects */
+    transition: background-color 0.3s, transform 0.3s ease-in-out; /* Animation effects */
 }
 
     .text-center h2:hover {
@@ -25,13 +23,13 @@ body {
         transform: scale(1.05); /* Slightly enlarge on hover */
     }
 
-
 /* Table Styles */
 .table {
     background-color: #ffffff; /* White background for the table */
     border-radius: 8px; /* Rounded corners */
     overflow: hidden; /* Hide overflow for rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-bottom: 20px; /* Space below the table */
 }
 
     .table th {
@@ -39,6 +37,8 @@ body {
         color: #ffffff; /* White text for header */
         padding: 12px; /* Add padding for header cells */
         text-align: left; /* Align header text to the left */
+        text-transform: uppercase; /* Uppercase text for headers */
+        letter-spacing: 1px; /* Slight letter spacing */
     }
 
     .table th, .table td {
@@ -46,7 +46,6 @@ body {
         padding: 12px; /* Add padding for table cells */
     }
 
-    /* Row Styles */
     .table tbody tr {
         transition: background-color 0.3s; /* Smooth background color change */
     }
@@ -57,35 +56,41 @@ body {
 
 /* Button Styles */
 .btn {
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions for buttons */
+    transition: background-color 0.3s, transform 0.2s ease-in-out; /* Smooth transitions for buttons */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem; /* Consistent button font size */
+    padding: 12px 20px; /* Adjust button padding for a more prominent appearance */
 }
 
 .btn-primary {
     background-color: #007bff; /* Bootstrap primary color */
+    color: #ffffff; /* White text */
     border: none; /* Remove border */
 }
 
     .btn-primary:hover {
-        background-color: #0056b3; /* Darken primary color on hover */
+        background-color: #0056b3; /* Darker primary color on hover */
         transform: scale(1.05); /* Slightly enlarge button on hover */
     }
 
 .btn-danger {
     background-color: #dc3545; /* Bootstrap danger color */
+    color: #ffffff; /* White text */
     border: none; /* Remove border */
 }
 
     .btn-danger:hover {
-        background-color: #c82333; /* Darken danger color on hover */
+        background-color: #c82333; /* Darker danger color on hover */
         transform: scale(1.05); /* Slightly enlarge button on hover */
     }
 
 /* Debugging Text */
 p {
     color: #ff0000; /* Red color for debugging text */
+    font-weight: bold; /* Bold the debugging text */
 }
 
-/* Animation for headings */
+/* Animation for Headings */
 h2 {
     animation: fadeIn 1s ease; /* Fade-in animation for the heading */
 }

@@ -1,0 +1,44 @@
+﻿@model proj.Models.UserLogin
+@{
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+    ViewData["Title"] = "User Login Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Glassmorphism Design</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form  asp-controller="Home" asp-action="Userlogin" method="post">
+            <h2> User Login</h2>
+            <div class="input-field">
+                <input asp-for="UserID" type="text" required />
+                <label>Enter your User ID</label>
+            </div>
+            <div class="input-field">
+                <input asp-for="password" type="password" required />
+                <label>Enter your Password</label>
+            </div>
+            <div class="forget">
+                <label for="remember">
+                    <input type="checkbox" id="remember">
+                    <p>Remember me</p>
+                </label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit">Log In</button>
+        </form>
+    </div>
+
+    @if (TempData["msg"] != null)
+    {
+        <script>
+            alert('@TempData["msg"]');
+        </script>
+    }
+</body>
+</html>

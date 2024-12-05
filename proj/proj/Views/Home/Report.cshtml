@@ -1,0 +1,9 @@
+﻿<h2>Select Report</h2>
+
+<button onclick="location.href='@Url.Action("Index", "Report", new { reportType = "yearly" })'">
+    Yearly Report
+</button>
+
+<button onclick="location.href='@Url.Action("Viewer", "Reports", new { reportType = "monthly" })'">
+    Monthly Report
+</button>

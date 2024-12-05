@@ -12,9 +12,9 @@ body {
     margin: auto;
     padding: 20px;
     background-color: #ffffff; /* White background for content */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    animation: fadeIn 1s ease; /* Fade-in animation */
+    border-radius: 12px; /* Slightly rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* More prominent shadow for depth */
+    animation: fadeIn 1s ease-out; /* Fade-in animation with ease-out */
 }
 
 /* Header Styles */
@@ -23,55 +23,58 @@ body {
     font-weight: bold;
     color: #ffffff;
     background-color: #007bff;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 20px;
+    border-radius: 12px;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for text */
     margin-bottom: 20px;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s ease, transform 0.3s ease-in-out;
 }
 
     .text-center h2:hover {
         background-color: #0056b3;
-        transform: scale(1.05);
+        transform: scale(1.05); /* Slightly enlarge on hover */
     }
 
 /* Alert Messages for Debugging */
 .alert-warning {
     color: #856404;
     background-color: #fff3cd;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 15px;
+    border-radius: 8px; /* Rounded corners for alerts */
+    padding: 12px;
+    margin-bottom: 20px;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600; /* Slightly bolder font */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
 /* Table Styles */
 .table {
     width: 100%;
     margin-top: 20px;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Light shadow */
-    border-collapse: collapse; /* Ensure cleaner borders */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05); /* Light shadow */
+    border-collapse: collapse;
 }
 
     .table th {
         background-color: #007bff;
         color: #ffffff;
-        padding: 12px;
+        padding: 14px;
         text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 
     .table th, .table td {
-        padding: 12px;
+        padding: 14px;
         border: none;
     }
 
     .table tbody tr {
-        transition: background-color 0.3s;
+        transition: background-color 0.3s ease; /* Smooth hover effect */
     }
 
         .table tbody tr:hover {
@@ -88,17 +91,17 @@ body {
 
 /* Button Styles */
 .btn {
-    transition: background-color 0.3s, transform 0.2s;
-    padding: 8px 12px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    padding: 10px 20px;
     font-size: 1rem;
-    border-radius: 5px;
-    margin-right: 5px;
+    border-radius: 8px;
+    margin-right: 8px;
 }
 
 .btn-primary {
     background-color: #007bff;
-    border: none;
     color: #ffffff;
+    border: none;
 }
 
     .btn-primary:hover {
@@ -108,8 +111,8 @@ body {
 
 .btn-danger {
     background-color: #dc3545;
-    border: none;
     color: #ffffff;
+    border: none;
 }
 
     .btn-danger:hover {
@@ -121,7 +124,7 @@ body {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(-10px); /* Slight slide down */
+        transform: translateY(-20px); /* Slide down effect */
     }
 
     to {

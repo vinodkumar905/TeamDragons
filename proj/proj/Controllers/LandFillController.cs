@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using proj.Models;
-using proj.Models.Models;
+
 using System.Data;
 
 namespace proj.Controllers

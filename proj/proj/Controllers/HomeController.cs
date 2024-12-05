@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using proj.Models;
-using proj.Models.Models;
 using System.Data;
 using System.Diagnostics;
 
@@ -11,6 +10,7 @@ namespace proj.Controllers
         
         private readonly ILogger<HomeController> _logger;
         private readonly Db _dbop; // Declare _dbop for login operations
+
 
         // Constructor to accept ILogger and Db instances
         public HomeController(ILogger<HomeController> logger, Db db)
@@ -54,6 +54,7 @@ namespace proj.Controllers
         {
             if (ModelState.IsValid) // Check if the login model is valid
             {
+                int count = 0;
                 int res = _dbop.LoginCheck(loginModel);
                 if (res == 1)
                 {
@@ -116,6 +117,46 @@ namespace proj.Controllers
             return View("~/Views/Home/ViewLandfill.cshtml");
         }
 
+
+        public IActionResult Userlogin()
+        {
+            return View("~/Views/Home/Userlogin.cshtml"); // Return the login view
+        }
+
+        // Login action (POST)
+
+
+
+
+
+        [HttpPost]
+        public IActionResult Userlogin([Bind] UserLogin loginModel)
+        {
+            if (ModelState.IsValid) // Check if the login model is valid
+            {
+                int res = _dbop.LoginCheck1(loginModel);
+                if (res == 1)
+                {
+                    TempData["msg"] = "You are welcome to the User Section";
+                    return RedirectToAction("Dashboard1");
+                }
+                else
+                {
+                    TempData["msg"] = "User ID or Password is wrong!";
+                }
+            }
+            return View(loginModel); // Return the login view with validation errors
+        }
+
+        public IActionResult Dashboard1()
+        {
+            return View(); // Return the dashboard view
+        }
+
+        public IActionResult logout()
+        {
+            return View("~/Views/Home/Homepage.cshtml");
+        }
 
 
     }

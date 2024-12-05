@@ -3,7 +3,7 @@ using proj.Models;
 using System.Data;
 using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
-using proj.Models.Models;
+
 
 
 namespace proj.Controllers

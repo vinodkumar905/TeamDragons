@@ -14,7 +14,6 @@
     <nav class="sidebar close">
         <header>
             <div class="image-text">
-
                 <div class="text logo-text">
                     <span class="name">Admin Dashboard</span>
                     <span class="profession">Welcome, Admin</span>
@@ -58,18 +57,24 @@
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="#" onclick="showTab('reports')">
+                        <a href="@Url.Action("Yearly", "Report")">
                             <span class="text nav-text">Reports</span>
                         </a>
                     </li>
+
                     <li class="nav-link">
                         <a href="@Url.Action("CreateLandfill", "LandFill")">
-                            <span class="text nav-text">Land Fill</span>
+                            <span class="text nav-text">LandFill</span>
                         </a>
                     </li>
                     <li class="nav-link">
                         <a href="@Url.Action("ViewLandfill", "LandFill")">
-                            <span class="text nav-text">View Land Fill</span>
+                            <span class="text nav-text">View LandFill</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="@Url.Action("CreateMaterialsetup", "MaterialSetup")">
+                            <span class="text nav-text">Create Material Setup</span>
                         </a>
                     </li>
                 </ul>
@@ -78,7 +83,7 @@
             <div class="bottom-content">
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="@Url.Action("logout", "Home")">
                             <span class="text nav-text">Logout</span>
                         </a>
                     </li>
@@ -87,14 +92,8 @@
         </div>
     </nav>
 
-    <section class="home">
-        <nav class="navbar">
-            <div class="container-fluid">
-                <h2 class="text-center">Admin Dashboard</h2>
-            </div>
-        </nav>
-        <h2>Welcome to the Admin Dashboard</h2>
-        <!-- Add your content here -->
+    <section class="home" style="background-image: url('@Url.Content("~/images/dashboard1.jpg")'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh;">
+        <!-- Content here -->
     </section>
 
     <script>

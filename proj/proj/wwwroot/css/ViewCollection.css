@@ -1,6 +1,6 @@
 ﻿/* General Body Styles */
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -26,20 +26,20 @@ body {
 /* Header Styling */
 .text-center h2 {
     font-size: 2.5rem;
-    font-weight: 700; /* Bold weight */
-    color: #333; /* Dark gray */
-    background-color: #007bff; /* Bright blue for header */
+    font-weight: 700; /* Bold weight for emphasis */
+    color: #333; /* Dark gray for text */
+    background-color: #007bff; /* Bright blue header */
     padding: 15px;
     border-radius: 8px;
     text-align: center;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Soft shadow for header text */
     margin-bottom: 20px;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth hover effect */
 }
 
     .text-center h2:hover {
         background-color: #0056b3; /* Darker blue on hover */
-        transform: scale(1.05);
+        transform: scale(1.05); /* Slight zoom effect */
     }
 
 /* Alert Messages for Debugging */
@@ -60,36 +60,40 @@ body {
     border-radius: 8px;
     overflow: hidden;
     background-color: #ffffff; /* White background for table */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Light shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Light shadow for table */
     border-collapse: collapse;
 }
 
+    /* Table Header */
     .table th {
-        background-color: #007bff; /* Header color */
-        color: #ffffff;
+        background-color: #007bff; /* Blue background for header cells */
+        color: #ffffff; /* White text */
         padding: 12px;
         text-align: left;
     }
 
+    /* Table Cells */
     .table th, .table td {
         padding: 12px;
         border: none;
     }
 
+    /* Table Rows */
     .table tbody tr {
         transition: background-color 0.3s;
     }
 
-        /* Background-color of the odd rows */
+        /* Background-color of odd rows */
         .table tbody tr:nth-child(odd) {
             background-color: #F7F7F7; /* Light gray for odd rows */
         }
 
-        /* Background-color of the even rows */
+        /* Background-color of even rows */
         .table tbody tr:nth-child(even) {
             background-color: #E9E9E9; /* Slightly darker gray for even rows */
         }
 
+        /* Hover effect for table rows */
         .table tbody tr:hover {
             background-color: #d6e9f2; /* Light blue on hover for better visibility */
         }
@@ -104,32 +108,34 @@ body {
 
 /* Button Styles */
 .btn {
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s, transform 0.2s; /* Button hover effects */
     padding: 8px 12px;
     font-size: 1rem;
     border-radius: 5px;
     margin-right: 5px;
-    color: #ffffff; /* White text color */
+    color: #ffffff; /* White text */
 }
 
+/* Primary Button */
 .btn-primary {
-    background-color: #007bff; /* Primary button color */
+    background-color: #007bff; /* Blue for primary button */
     border: none;
 }
 
     .btn-primary:hover {
         background-color: #0056b3; /* Darker blue on hover */
-        transform: scale(1.05);
+        transform: scale(1.05); /* Slight zoom effect */
     }
 
+/* Danger Button */
 .btn-danger {
-    background-color: #dc3545; /* Danger button color */
+    background-color: #dc3545; /* Red for danger button */
     border: none;
 }
 
     .btn-danger:hover {
-        background-color: #c82333; /* Darker on hover */
-        transform: scale(1.05);
+        background-color: #c82333; /* Darker red on hover */
+        transform: scale(1.05); /* Slight zoom effect */
     }
 
 /* Fade-in Animation */
@@ -138,9 +144,9 @@ body {
         opacity: 0;
         transform: translateY(-10px); /* Slight slide down */
     }
-    
+
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0); /* Normal position */
     }
 }

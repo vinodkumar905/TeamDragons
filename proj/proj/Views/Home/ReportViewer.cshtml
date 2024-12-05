@@ -1,0 +1,15 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SSRS Report</title>
+</head>
+<body>
+    <form method="post">
+        @Html.Raw(ViewBag.ReportViewer?.RenderHtml())  <!-- Render the ReportViewer -->
+    </form>
+</body>
+</html>

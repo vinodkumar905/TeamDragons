@@ -1,122 +1,118 @@
-﻿/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* Ensure HTML and Body take full height */
-html, body {
-    height: 100%;
-}
-
-/* Header Styling */
+﻿/* Header Section */
 .header {
-    background-color: #d2f8d2; /* Light green color */
-    color: black; /* Changed to black for better contrast */
-    padding: 20px;
+    background-color: rgba(52, 58, 64, 0.9); /* Semi-transparent background */
+    color: white;
+    padding: 2px 0; /* Reduced padding to make header very small */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    left: 0;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px; /* Reduced horizontal padding */
+    width: 100%;
 }
 
+/* Logo to the left corner */
+.logo img {
+    width: 80px; /* Reduced logo size */
+    height: auto;
+    margin-left: 0; /* Remove any left margin */
+}
+
+/* Move nav-links slightly to the left */
 .nav-links {
     list-style: none;
+    padding: 0;
+    display: flex;
+    margin-left: -20px; /* Move the buttons a little bit left */
 }
 
     .nav-links li {
-        display: inline-block;
-        margin: 0 10px;
+        margin-right: 15px; /* Slightly increased margin to make sure all buttons are visible */
     }
 
     .nav-links a {
-        color: black; /* Changed to black for better contrast */
+        color: white;
         text-decoration: none;
-        font-size: 16px;
+        font-weight: 600;
+        padding: 6px 10px; /* Reduced padding for buttons */
+        border-radius: 4px;
+        font-size: 14px; /* Reduced font size for links */
+        transition: background-color 0.3s ease, color 0.3s ease;
+        display: inline-block;
     }
 
-        .nav-links a:hover {
-            text-decoration: underline;
+    /* Professional and Aesthetic Button Colors */
+    .nav-links .btn {
+        background-color: #28a745; /* Green button color */
+        color: white;
+        padding: 6px 10px; /* Reduced padding */
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 14px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+        .nav-links .btn:hover {
+            background-color: #218838; /* Darker green on hover */
+            transform: translateY(-2px); /* Slight elevation effect */
         }
 
-/* Hero Section Styling - fills entire viewport below header */
-.hero {
-    background: url('https://source.unsplash.com/1600x900/?recycle') no-repeat center center/cover;
-    height: calc(100vh - 80px); /* Adjust height by header size */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-}
-
-.hero-text h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.hero-text p {
-    font-size: 20px;
-    width: 60%;
-}
-
-/* Middle Content Section */
-.content-section {
-    padding: 80px 40px; /* Increased top and bottom padding */
-    text-align: center;
-    background: url("/images/HomePage.jpg") no-repeat center center / cover; /* Adjust the path as needed */
-    color: white; /* Text color for better contrast */
-    position: relative; /* Ensure the pseudo-element is positioned relative to this section */
-    z-index: 1; /* Set the stacking order for this section */
-}
-
-    /* Overlay for text clarity */
-    .content-section::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5); /* Dark overlay to enhance text visibility */
-        z-index: -1; /* Position behind the content */
+    .nav-links a:hover {
+        background-color: #007bff; /* Blue on hover */
+        color: white;
     }
 
-    /* Heading and Paragraph Styling */
+/* Image Section (Background Image) */
+.image-section {
+    background-image: url('/images/home.jpg'); /* Path to the image */
+    height: 100vh; /* Full viewport height */
+    background-size: cover; /* Ensure the image covers the whole screen */
+    background-position: center;
+    margin-bottom: 30px;
+}
+
+/* Content Section */
+.content-section {
+    margin-top: 70px; /* Adjusted to give space for the smaller header */
+    padding: 40px 20px;
+    background-color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
     .content-section h2 {
-        font-size: 32px;
-        margin-bottom: 20px;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
+        font-size: 2rem;
+        color: #333;
     }
 
     .content-section p {
-        font-size: 18px;
-        width: 80%;
-        margin: 0 auto;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
+        font-size: 1.1rem;
+        color: #666;
+        line-height: 1.6;
     }
 
-/* Footer Styling */
+/* Footer Section */
 .footer {
-    background-color: #d2f8d2; /* Light green color */
-    color: black; /* Changed to black for better contrast */
-    text-align: center;
+    background-color: #343a40;
+    color: white;
     padding: 20px 0;
-    position: relative; /* Ensures proper stacking */
-    bottom: 0;
-    width: 100%;
+    text-align: center;
 }
 
-/* Image Section Styling - Optional if you need a dedicated image section */
-.image-section {
-    width: 100%;
-    height: 100vh; /* Ensures it takes the full height */
-    background-image: url("/images/home.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+    .footer h3 {
+        margin-bottom: 10px;
+    }
+
+    .footer p {
+        margin: 5px 0;
+    }

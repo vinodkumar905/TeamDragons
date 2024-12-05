@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null; // No layout for this page, it's just a report
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yearly Report</title>
+    <link href="https://cdn.devexpress.com/DevExtreme/20.2/css/dx.common.css" rel="stylesheet">
+    <link href="https://cdn.devexpress.com/DevExtreme/20.2/css/dx.light.css" rel="stylesheet">
+    <script src="https://cdn.devexpress.com/DevExtreme/20.2/js/jquery.min.js"></script>
+    <script src="https://cdn.devexpress.com/DevExtreme/20.2/js/jszip.min.js"></script>
+    <script src="https://cdn.devexpress.com/DevExtreme/20.2/js/devextreme.all.js"></script>
+    <script src="https://cdn.devexpress.com/DevExtreme/20.2/js/dx.webdocumentviewer.js"></script>
+</head>
+<body>
+    <div id="webDocumentViewerContainer"></div>
+
+    <script>
+        $(function() {
+            var reportUrl = '@Url.Action("GetReport", "Reports", new { reportType = "yearly" })';
+            $("#webDocumentViewerContainer").dxWebDocumentViewer({
+                reportUrl: reportUrl,
+                height: 600
+            });
+        });
+    </script>
+</body>
+</html>

@@ -18,30 +18,28 @@
     <!-- Header Section -->
     <header class="header">
         <nav class="navbar">
-            <div class="logo">Recycle System</div>
+            <!-- Logo Image -->
+            <div class="logo">
+                <img src="~/images/recyl.jpg" alt="Recycle Logo"> <!-- Replace with your logo image -->
+            </div>
+
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="/Home/Index1">Login</a></li>
+                <li><a href="#" class="btn">Home</a></li> <!-- Home Button -->
+                <li><a href="#" class="btn">Contact Us</a></li> <!-- Contact Us Button -->
+                <li class="reveal-block">
+                    <a asp-controller="Home" asp-action="Index1" class="btn">Admin Login</a> <!-- Admin Login Button -->
+                </li>
+                <li class="reveal-block">
+                    <a asp-controller="Home" asp-action="Userlogin" class="btn">User Login</a> <!-- User Login Button -->
+                </li>
             </ul>
         </nav>
     </header>
 
-    <!-- Image Section (Styled via CSS) -->
+    <!-- Image Section (Background Image) -->
     <div class="image-section">
-        <!-- No direct image tag here; image will load from CSS -->
+        <!-- Background Image will cover the whole section -->
     </div>
-
- @*     <!-- Hero Section -->
-     <div class="hero">
-         <div class="hero-text">
-             <h1>Welcome to Our Recycle System</h1>
-             <p>
-                 Committed to providing sustainable solutions to reduce waste and protect the environment.
-                 Join us in our mission for a cleaner and greener future.
-             </p>
-         </div>
-     </div> *@
 
     <!-- Middle Content Section -->
     <section class="content-section">

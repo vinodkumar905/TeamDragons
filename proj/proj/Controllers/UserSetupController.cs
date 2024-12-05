@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using proj.Models.Models;
+
 using proj.Models;
 using System.Data;
 using System.Diagnostics;

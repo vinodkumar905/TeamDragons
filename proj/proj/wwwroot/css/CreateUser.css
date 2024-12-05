@@ -1,16 +1,16 @@
 ﻿/* General Body Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8; /* Light background for contrast */
+    background-color: #f9fafb; /* Lighter background for a fresh look */
     margin: 0;
     padding: 20px;
 }
 
 /* Header Styling */
 .text-center h2 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     font-weight: bold;
-    color: #007bff; /* Blue color for the heading */
+    color: #4a90e2; /* Lively blue color for the heading */
     text-align: center; /* Centered text */
     margin-bottom: 20px; /* Space below heading */
 }
@@ -20,10 +20,10 @@ form {
     max-width: 700px; /* Set a max-width for the form */
     margin: auto; /* Center the form */
     padding: 20px;
-    background: linear-gradient(135deg, #ffffff, #e6f7ff); /* Soft gradient */
+    background: linear-gradient(135deg, #ffffff, #e1f5fe); /* Soft blue gradient */
     border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    animation: fadeIn 0.5s ease; /* Fade in effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    animation: fadeIn 0.5s ease; /* Fade-in effect */
 }
 
 /* Input Field Styles */
@@ -32,17 +32,17 @@ form {
     padding: 15px 20px; /* Adjusted padding for better fit */
     font-size: 1rem; /* Slightly adjusted font size */
     height: 60px; /* Set a specific height for the input fields */
-    border: 2px solid #ced4da; /* Light border color */
+    border: 2px solid #b2bec3; /* Light gray border */
     border-radius: 8px; /* Rounded corners */
-    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    transition: border-color 0.3s, box-shadow 0.3s ease-in-out; /* Smooth transitions */
     margin-bottom: 15px; /* Space below each input */
     box-sizing: border-box; /* Include padding and border in element's total width */
 }
 
     /* Input Field Focus Effect */
     .custom-input:focus, .custom-select:focus {
-        border-color: #007bff; /* Change border color on focus */
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue glow effect */
+        border-color: #3498db; /* Bright blue border on focus */
+        box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Blue glow effect */
         outline: none; /* Remove default outline */
     }
 
@@ -56,18 +56,19 @@ form {
     width: 100%; /* Full width buttons */
     border: none; /* Remove border */
     color: #ffffff; /* White text */
-    transition: background-color 0.3s, transform 0.2s; /* Transition effects */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s ease-in-out; /* Transition effects */
 }
 
 /* Primary Button Styles */
 .btn-primary {
-    background-color: #007bff; /* Primary button color */
+    background-color: #3498db; /* Bright blue primary button */
 }
 
     /* Primary Button Hover Effect */
     .btn-primary:hover {
-        background-color: #0056b3; /* Darker blue on hover */
+        background-color: #2980b9; /* Darker blue on hover */
         transform: scale(1.05); /* Slightly grow the button */
+        box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3); /* Add shadow on hover */
     }
 
 /* Fade-in Animation */
@@ -88,6 +89,7 @@ label {
     font-weight: bold; /* Bold labels */
     margin-bottom: 5px; /* Space below labels */
     display: block; /* Labels on a new line */
+    color: #2c3e50; /* Darker shade for label text */
 }
 
 /* Custom Styles for Select Elements */
@@ -99,6 +101,6 @@ label {
 
 /* Placeholder Text Style */
 ::placeholder {
-    color: #aab8c2; /* Light gray for placeholder */
+    color: #95a5a6; /* Lighter gray for placeholder text */
     opacity: 1; /* Ensures placeholder text is visible */
 }

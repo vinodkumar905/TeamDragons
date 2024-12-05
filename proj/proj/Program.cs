@@ -1,12 +1,18 @@
-using proj.Models.Models; // Add the namespace for your Db class
+using proj.Models;
+
+using proj.Controllers;
+// Add the namespace for your Db class
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+
+
 // Register your Db class with the dependency injection container
 builder.Services.AddScoped<Db>(); // Use AddScoped, AddTransient, or AddSingleton as needed
+
 
 var app = builder.Build();
 
